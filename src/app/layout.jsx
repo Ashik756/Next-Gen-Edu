@@ -10,6 +10,34 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+export const metadata = {
+  title: "Next Gen Edu — বাংলাদেশের সেরা LMS Platform",
+  description: "দেশ সেরা টিচার প্যানেল নিয়ে আমরা আছি তোমাদের সাথে। এইচএসসি, এডমিশন, স্কিলস কোর্স করো অনলাইনে।",
+  keywords: "LMS, online learning, HSC, admission, Bangladesh, education",
+  openGraph: {
+    title: "Next Gen Edu — বাংলাদেশের সেরা LMS Platform",
+    description: "দেশ সেরা টিচার প্যানেল নিয়ে আমরা আছি তোমাদের সাথে।",
+    url: "https://your-domain.vercel.app",
+    siteName: "Next Gen Edu",
+    images: [
+      {
+        url: "https://your-domain.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Next Gen Edu",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next Gen Edu — বাংলাদেশের সেরা LMS Platform",
+    description: "দেশ সেরা টিচার প্যানেল নিয়ে আমরা আছি তোমাদের সাথে।",
+    images: ["https://your-domain.vercel.app/og-image.png"],
+  },
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
