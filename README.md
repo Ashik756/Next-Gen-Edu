@@ -88,7 +88,7 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Ashik756/Next-Gen-Edu.git
+git clone https://github.com/Ashik756/Next-Gen-Edu
 cd Next-Gen-Edu
 ```
 
