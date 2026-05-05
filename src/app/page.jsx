@@ -5,6 +5,9 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { BookOpen, ArrowRight, Star } from "lucide-react"
+import { useSession } from "next-auth/react"
+import FeatureCard from "@/components/Home page/FeatureCard"
+import WhyUs from "@/components/Home page/WhyUs"
 
 function FeaturedCourseCard({ course }) {
   return (
@@ -14,10 +17,17 @@ function FeaturedCourseCard({ course }) {
     >
       <div className="aspect-video bg-white/5 overflow-hidden">
         {course.thumbnail
-          ? <img src={course.thumbnail} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          ? <div className="relative w-full h-full">
+            <Image
+              src={course.thumbnail}
+              alt={course.title}
+              fill
+              className="object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
           : <div className="w-full h-full flex items-center justify-center">
-              <BookOpen size={32} className="text-white/20" />
-            </div>
+            <BookOpen size={32} className="text-white/20" />
+          </div>
         }
       </div>
       <div className="p-4 flex flex-col gap-2">
@@ -51,6 +61,7 @@ function FeaturedCourseCard({ course }) {
 export default function HomePage() {
   const [featuredCourses, setFeaturedCourses] = useState([])
   const [loading, setLoading] = useState(true)
+  const { data: session } = useSession()
 
   useEffect(() => {
     let cancelled = false
@@ -71,9 +82,9 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-6 pt-24 pb-16 text-center flex flex-col items-center gap-6">
-        <div className="inline-flex items-center gap-2 bg-[#7aff2e]/10 border border-[#7aff2e]/20 text-[#7aff2e] text-xs px-4 py-1.5 rounded-full">
+        <div className="inline-flex items-center gap-2 bg-[#7aff2e]/10 border border-[#7aff2e]/20 text-[#7aff2e] text-xs px-4 py-1.5 rounded-full shadow-xl/20 shadow-[#7aff2e]">
           <Star size={12} fill="currentColor" />
-          Bangladesh`s Best LMS Platform
+          Bangladesh`s Best Educational Platform
         </div>
         <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight max-w-3xl">
           Learn from the{" "}
@@ -92,10 +103,10 @@ export default function HomePage() {
             <ArrowRight size={16} />
           </Link>
           <Link
-            href="/register"
+            href={session ? "/dashboard" : "/register"}
             className="flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded-full text-sm hover:border-white/40 transition"
           >
-            Get Started Free
+            {session ? "Dashboard" : "Get Started Free"}
           </Link>
         </div>
 
@@ -113,6 +124,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Featured Card */}
+      <FeatureCard></FeatureCard>
 
       {/* Featured Courses */}
       <section className="max-w-7xl mx-auto px-6 pb-20">
@@ -159,6 +173,9 @@ export default function HomePage() {
           </div>
         )}
       </section>
+
+      {/* Why US */}
+      <WhyUs></WhyUs>
 
       {/* CTA — Teach with us */}
       <section className="max-w-7xl mx-auto px-6 pb-20">

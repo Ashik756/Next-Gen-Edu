@@ -88,7 +88,11 @@ src/
 ### 1. Clone the repository
 
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/Ashik756/Next-Gen-Edu
+=======
+git clone https://github.com/Ashik756/Next-Gen-Edu.git
+>>>>>>> e78a0f6 (Home page edited)
 cd Next-Gen-Edu
 ```
 
@@ -216,4 +220,8 @@ https://yourdomain.com/api/auth/callback/google
 
 ## License
 
+<<<<<<< HEAD
 MIT License
+=======
+MIT License
+>>>>>>> e78a0f6 (Home page edited)
