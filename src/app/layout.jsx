@@ -18,11 +18,11 @@ export const metadata = {
   openGraph: {
     title: "Next Gen Edu — বাংলাদেশের সেরা LMS Platform",
     description: "দেশ সেরা টিচার প্যানেল নিয়ে আমরা আছি তোমাদের সাথে।",
-    url: "https://your-domain.vercel.app",
+    url: "https://nextgenedu-pi.vercel.app",
     siteName: "Next Gen Edu",
     images: [
       {
-        url: "https://your-domain.vercel.app/og-image.png",
+        url: "https://nextgenedu-pi.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Next Gen Edu",
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Next Gen Edu — বাংলাদেশের সেরা LMS Platform",
     description: "দেশ সেরা টিচার প্যানেল নিয়ে আমরা আছি তোমাদের সাথে।",
-    images: ["https://your-domain.vercel.app/og-image.png"],
+    images: ["https://nextgenedu-pi.vercel.app/og-image.png"],
   },
 }
 
