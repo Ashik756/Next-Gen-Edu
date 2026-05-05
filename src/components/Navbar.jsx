@@ -10,8 +10,9 @@ import Logo from "./Logo";
 
 const NAV_LINKS = [
   { name: "Home", path: "/" },
-  { name: "Features", path: "/features" },
-  { name: "Pricing", path: "/pricing" },
+  { name: "All Courses", path: "#" },
+  { name: "Next Gen Store", path: "#" },
+  { name: "Contact Us", path: "#" },
 ];
 
 const ROLE_DASHBOARD = {
@@ -56,8 +57,8 @@ export default function Navbar() {
           {user ? (
             <Link href={dashboardPath} className="flex items-center gap-2 bg-linear-65 from-[#C2FF97] to-[#7BFD00] text-black px-4 py-1.5 rounded-full text-sm font-semibold">
               {user.image
-                ? <Image src={user.image} alt={user.name} width={20} height={20} className="rounded-full" />
-                : <div className="w-5 h-5 rounded-full bg-black flex items-center justify-center text-[10px] font-bold">{user.name?.charAt(0).toUpperCase()}</div>
+                ? <Image src={user.image} alt={user.name} width={30} height={30} className="rounded-full" />
+                : <div className="bg-linear-65 from-[#C2FF97] to-[#7BFD00] text-black px-4 py-2 rounded-full text-lg font-semibold">{user.name?.charAt(0).toUpperCase()}</div>
               }
               Dashboard
             </Link>

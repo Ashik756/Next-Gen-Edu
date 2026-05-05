@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 const TeacherApplicationSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", default: null },
   name: { type: String, required: true },
+  name: { type: Number, required: true },
   email: { type: String, required: true },
   expertise: { type: String, required: true },
   bio: { type: String },

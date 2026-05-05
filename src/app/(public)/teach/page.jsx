@@ -129,6 +129,18 @@ export default function TeachPage() {
               />
             </div>
 
+            {/* Whats'app */}
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm text-white/70 font-medium">Whats App *</label>
+              <input
+                name="whatsApp"
+                value={form?.phone}
+                onChange={handleChange}
+                placeholder="+880 1826 XXXXXX"
+                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm outline-none focus:border-[#7aff2e]/50 transition placeholder:text-white/20"
+              />
+            </div>
+
             {/* Email */}
             <div className="flex flex-col gap-1.5">
               <label className="text-sm text-white/70 font-medium">Gmail Address *</label>
