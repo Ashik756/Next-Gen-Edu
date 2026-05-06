@@ -10,7 +10,7 @@ import Logo from "./Logo";
 
 const NAV_LINKS = [
   { name: "Home", path: "/" },
-  { name: "All Courses", path: "#" },
+  { name: "All Courses", path: "/courses" },
   { name: "Next Gen Store", path: "#" },
   { name: "Contact Us", path: "#" },
 ];
