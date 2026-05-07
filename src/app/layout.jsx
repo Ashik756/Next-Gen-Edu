@@ -1,10 +1,11 @@
-import SessionWrapper from "@/components/SessionWrapper";
+import SessionWrapper from "@/components/Common/SessionWrapper";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import ConditionalNavbar from "@/components/ConditionalNavbar";
-import ConditionalMain from "@/components/ConditionalMain";
-import ConditionalFooter from "@/components/ConditionalFooter";
+import ConditionalNavbar from "@/components/Common/ConditionalNavbar";
+import ConditionalMain from "@/components/Common/ConditionalMain";
+import ConditionalFooter from "@/components/Common/ConditionalFooter";
+
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 

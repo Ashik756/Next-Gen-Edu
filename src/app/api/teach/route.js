@@ -6,10 +6,11 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { name, email, expertise, bio, socialLinks } = await req.json();
 
-    if (!name || !email || !expertise) {
-      return NextResponse.json({ error: "Name, email and expertise are required." }, { status: 400 });
+    const { name, whatsApp, email, expertise, bio, socialLinks } = await req.json();
+
+    if (!name || !whatsApp || !email || !expertise) {
+      return NextResponse.json({ error: "Name, Whats app email and expertise are required." }, { status: 400 });
     }
 
     if (!email.endsWith("@gmail.com")) {
@@ -30,6 +31,7 @@ export async function POST(req) {
     const application = await TeacherApplication.create({
       userId: user?._id || null,
       name,
+      whatsApp,
       email,
       expertise,
       bio,

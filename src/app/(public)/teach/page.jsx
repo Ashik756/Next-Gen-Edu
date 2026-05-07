@@ -13,6 +13,7 @@ export default function TeachPage() {
   const [error, setError] = useState("")
   const [form, setForm] = useState({
     name: session?.user?.name || "",
+    name: session?.user?.whatsApp || "",
     email: session?.user?.email || "",
     expertise: "",
     bio: "",
@@ -28,7 +29,7 @@ export default function TeachPage() {
     e.preventDefault()
     setError("")
 
-    if (!form.name || !form.email || !form.expertise) {
+    if (!form.name || !form.whatsApp || !form.email || !form.expertise) {
       return setError("Name, email and expertise are required.")
     }
 
